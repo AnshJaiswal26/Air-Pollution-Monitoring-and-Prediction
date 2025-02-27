@@ -3,28 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Air Pollution Monitoring</title>
-    <link rel="stylesheet" href="Frontend1.css.css">
+    <title>Air Quality Checker</title>
+    <link rel="stylesheet" href="Frontend1.css">
 </head>
 <body>
-<header>
-    <h1>Air Pollution Monitoring</h1>
-</header>
-<main>
-    <section id="current-data">
-        <h2>Current Air Quality</h2>
-        <div id="air-quality">
-            <p>Loading...</p>
-        </div>
-    </section>
-    <section id="historical-data">
-        <h2>Historical Data</h2>
-        <canvas id="airQualityChart"></canvas>
-    </section>
-</main>
-<footer>
-    <p>&copy; 2025 Air Pollution Monitoring</p>
-</footer>
-<script src="app.js"></script>
+
+<div class="container">
+    <h1>Air Quality Index (AQI) Checker</h1>
+
+    <div class="search-box">
+        <input type="text" id="locationInput" placeholder="Enter City or State...">
+        <button onclick="fetchAirQuality()">Check AQI</button>
+    </div>
+
+    <div id="result" class="result-box">
+        <h2>Air Quality Data</h2>
+        <p><strong>City:</strong> <span id="city"></span></p>
+        <p><strong>State:</strong> <span id="state"></span></p>
+        <p><strong>Last Updated:</strong> <span id="last_update"></span></p>
+        <p><strong>Min Pollution:</strong> <span id="pollutant_min"></span></p>
+        <p><strong>Avg Pollution:</strong> <span id="pollutant_avg"></span></p>
+        <p><strong>Max Pollution:</strong> <span id="pollutant_max"></span></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
